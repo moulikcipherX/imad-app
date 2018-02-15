@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-let articles = {
+var articles = {
     'article-one' : {
         'title' : 'Moulik Aggarwal | Coding 101',
         'heading':'Article One',
@@ -28,12 +28,12 @@ let articles = {
 };
 
 function createTemplate(data){
-    let title = data.title;
-    let heading = data.heading;
-    let content = data.content;
-    let date = data.date;
+    var title = data.title;
+    var heading = data.heading;
+    var content = data.content;
+    var date = data.date;
     
-    let htmlTemplate =
+    var htmlTemplate =
     `<html>
         <head>
             <title>${title}</title>
