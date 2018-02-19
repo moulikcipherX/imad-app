@@ -75,7 +75,7 @@ app.get('/counter', function (req, res) {
 });
 
 var namelist = [];
-app.get('/submit-name',function (req,res){
+app.get('/submitname',function (req,res){
     //Get The name from request query params
     var name = res.query.name;
     namelist.push(name);
