@@ -74,6 +74,12 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
+var namelist = [];
+app.get('/submit-name',function (req,res){
+    var namelist = res.query.push(name)
+   res.send() 
+});
+
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
