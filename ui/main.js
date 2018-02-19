@@ -25,10 +25,10 @@ button.onclick = function()
     request.open('GET','http://badshahmoulik.imad.hasura-app.io/counter',true);
     //request.open('GET','http://badshahmoulik.imad.hasura-app.io/submit-name',true);
     request.send(null);
-    
+};
     //Submit name
     var nameInput = document.getElementById('name');
-    var name = nameInput.value;
+    var val = nameInput.value;
     var submit = document.getElementById('submit_btn');
     submit.onclick = function() {
         //Make a request and send a name
@@ -42,7 +42,3 @@ button.onclick = function()
         var ul = document.getElementById('namelist');
         ul.innerHTML = list;
     };
-    
-    
-    
-};
