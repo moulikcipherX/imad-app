@@ -14,28 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
-var articles = {
-    'article-one' : {
-        'title' : 'Moulik Aggarwal | Coding 101',
-        'heading':'Article One',
-        'content' : '<p> Moulik Aggarwals Content',
-        'date' : 'Feb 13 2018'
-    },
-    'article-two' : {
-        'title' : 'Moulik Aggarwal | Coding 102',
-        'heading':'Article Two',
-        'content' : '<p> Moulik Aggarwals Content',
-        'date' : 'Feb 15 2018'
-    },
-    'article-three' : {
-        'title' : 'Moulik Aggarwal | Coding 103',
-        'heading':'Article Three',
-        'content' : '<p> Moulik Aggarwals Content',
-        'date' : 'Feb 17 2018'
-    },
-};
-
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
