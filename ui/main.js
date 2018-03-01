@@ -1,7 +1,6 @@
 //Counter Code
 var button = document.getElementById('counter');
 
-
 button.onclick = function()
 {
     //Create A request object
@@ -26,6 +25,8 @@ button.onclick = function()
     //request.open('GET','http://badshahmoulik.imad.hasura-app.io/submit-name',true);
     request.send(null);
 };
+
+
     //Submit name
     
     var submit = document.getElementById('submit_btn');
@@ -60,3 +61,48 @@ button.onclick = function()
     request.open('GET','http://badshahmoulik.imad.hasura-app.io/submit?name='+name,true);
     request.send(null);
 };
+
+
+
+
+
+
+    //Login Username and Password
+    
+    var input = document.getElementById('submit-btn');
+    input.onclick = function() {
+        
+    //Create A request object
+    var request = new XMLHttpRequest();
+    
+    //Capture The response and store it in the variable
+    request.onreadystatechange = function(){
+        if (request.readyState === XMLHttpRequest.DONE ){
+            //Take Some Action
+            if(request.status === 200){
+                //Logged In Message
+                console.log('User Logged In');
+            } else if(request.status === 403) {
+                alert('Enter The Valid username and password');
+            } else if(request.status === 500) {
+                alert('Server is Down');
+            } 
+        }
+    };
+    
+    //Make the request
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    request.open('POST','http://badshahmoulik.imad.hasura-app.io/login',true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
+
+
+
+
+
+
+
+
+
