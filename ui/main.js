@@ -82,6 +82,7 @@ button.onclick = function()
             if(request.status === 200){
                 //Logged In Message
                 console.log('User Logged In');
+                alert('Logged In Successfully');
             } else if(request.status === 403) {
                 alert('Enter The Valid username and password');
             } else if(request.status === 500) {
